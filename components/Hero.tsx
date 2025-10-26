@@ -31,7 +31,63 @@ const techStack = [
   { icon: FigmaIcon, name: "Figma" },
   { icon: WordPressIcon, name: "WordPress" },
   { icon: CanvaIcon, name: "Canva" },
+
+  // 🆕 Added Tech Stack items
+  {
+    icon: ({ className }: { className?: string }) => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        className={className}
+      >
+        <path d="M12 2C6.48 2 2 6.48 2 12c0 3.88 2.42 7.2 5.82 8.65-.08-.69-.13-1.76.03-2.52.14-.65.92-4.12.92-4.12s-.23-.46-.23-1.13c0-1.06.62-1.86 1.39-1.86.66 0 .98.5.98 1.1 0 .67-.43 1.68-.65 2.61-.19.81.4 1.48 1.19 1.48 1.43 0 2.52-1.51 2.52-3.68 0-1.93-1.39-3.28-3.38-3.28-2.3 0-3.65 1.73-3.65 3.52 0 .7.27 1.45.61 1.86.07.08.08.15.06.23-.06.25-.19.81-.22.93-.03.1-.11.13-.25.08-1-.38-1.62-1.58-1.62-2.55 0-2.07 1.5-3.97 4.34-3.97 2.28 0 4.05 1.63 4.05 3.8 0 2.27-1.43 4.1-3.41 4.1-.67 0-1.3-.35-1.52-.76l-.41 1.57c-.15.6-.57 1.36-.85 1.82.63.19 1.3.3 2 .3 5.52 0 10-4.48 10-10S17.52 2 12 2z" />
+      </svg>
+    ),
+    name: "React Native",
+  },
+  {
+    icon: ({ className }: { className?: string }) => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        className={className}
+      >
+        <path d="M12 0C5.373 0 0 3.582 0 8c0 1.656 1.086 3.157 2.884 4.365C1.089 13.005 0 14.45 0 16c0 4.418 5.373 8 12 8s12-3.582 12-8c0-1.55-1.089-2.995-2.884-3.635C22.914 11.157 24 9.656 24 8c0-4.418-5.373-8-12-8z" />
+      </svg>
+    ),
+    name: "Java",
+  },
+  {
+    icon: ({ className }: { className?: string }) => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        className={className}
+      >
+        <path d="M12 0C8.686 0 6 2.686 6 6v12c0 3.314 2.686 6 6 6s6-2.686 6-6V6c0-3.314-2.686-6-6-6zM8 6a4 4 0 1 1 8 0v12a4 4 0 1 1-8 0V6z" />
+      </svg>
+    ),
+    name: "Spring Boot",
+  },
+  {
+    icon: ({ className }: { className?: string }) => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        className={className}
+      >
+        <path d="M4 4h16v2H4zm0 4h10v2H4zm0 4h16v2H4zm0 4h10v2H4z" />
+      </svg>
+    ),
+    name: "Third-Party API Integration",
+  },
+  
 ];
+
 
 const whyChooseUs = [
     {
@@ -305,14 +361,14 @@ const HomePage: React.FC<{ setActiveRoute: (route: string) => void }> = ({
             {[
               {
                 title: "Retail E-commerce Boost",
-                result: 180,
+                result: 100,
                 metric: "% Increase in Sales",
                 desc: "We built a lightning-fast eCommerce store using Next.js and Node.js that boosted conversions by 180%.",
                 img: "https://digitology.co/wp-content/uploads/2023/03/e-commerce-wb.png",
               },
               {
                 title: "School ERP Automation",
-                result: 400,
+                result: 97,
                 metric: "Schools Onboarded",
                 desc: "Our School Management ERP automated student, fee, and results for 400+ institutes.",
                 img: "https://www.skoolbeep.com/blog/wp-content/uploads/2021/01/SCHOOL-ERP-MODULES.png",
