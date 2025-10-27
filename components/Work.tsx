@@ -6,7 +6,7 @@ import TagIcon from './icons/TagIcon';
 // Mock data for projects
 const projectsData: Project[] = [
   {
-    image: './images/hindimeinjaankari.png',
+    image: './hindimeinjaankari.png',
     title: 'hindimeinjaankari.com',
     category: 'WordPress',
     description:
@@ -14,7 +14,7 @@ const projectsData: Project[] = [
     link: 'https://hindimeinjaankari.com/',
   },
   {
-    image: './images/khetiwale.png',
+    image: './khetiwale.png',
     title: 'khetiwale.com',
     category: 'WordPress',
     description:
@@ -22,7 +22,7 @@ const projectsData: Project[] = [
     link: 'https://khetiwale.com/',
   },
   {
-    image: './images/universityresultzone.png',
+    image: './universityresultzone.png',
     title: 'universityresultzone.com',
     category: 'WordPress',
     description:
@@ -30,7 +30,7 @@ const projectsData: Project[] = [
     link: 'https://universityresultzone.com/',
   },
   {
-    image: './images/topgearguide.png',
+    image: './topgearguide.png',
     title: 'topgearguide.com',
     category: 'WordPress',
     description:
