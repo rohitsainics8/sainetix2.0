@@ -12,6 +12,7 @@ export interface Project {
   title: string;
   category: string;
   description: string;
+  link?: string;
 }
 
 export interface WebsiteConcept {
