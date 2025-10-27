@@ -136,6 +136,9 @@ const Header: React.FC<HeaderProps> = ({ activeRoute, setActiveRoute }) => {
                     <a href="#/logo-generator" onClick={(e) => handleNavClick(e, '#/logo-generator')} className="bg-indigo-600/50 hover:bg-indigo-700/50 text-white font-semibold py-3 px-6 rounded-md w-4/5 text-center">
                         Logo Generator
                     </a>
+                     <a href="#/idea-generator" onClick={(e) => handleNavClick(e, '#/idea-generator')} className="bg-indigo-600/50 hover:bg-indigo-700/50 text-white font-semibold py-3 px-6 rounded-md w-4/5 text-center">
+                        Idea Generator
+                    </a>
                  </nav>
             </div>
         </header>
