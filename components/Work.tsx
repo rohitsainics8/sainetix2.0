@@ -3,10 +3,16 @@ import type { Project } from '../types';
 import AnimatedSection from './AnimatedSection';
 import TagIcon from './icons/TagIcon';
 
+// ✅ Import images directly from src
+import hindiImage from '../hindimeinjaankari.png';
+import khetiwaleImage from '../khetiwale.png';
+import universityImage from '../universityresultzone.png';
+import topgearImage from '../topgearguide.png';
+
 // Mock data for projects
 const projectsData: Project[] = [
   {
-    image: './hindimeinjaankari.png',
+    image: hindiImage,
     title: 'hindimeinjaankari.com',
     category: 'WordPress',
     description:
@@ -14,7 +20,7 @@ const projectsData: Project[] = [
     link: 'https://hindimeinjaankari.com/',
   },
   {
-    image: './khetiwale.png',
+    image: khetiwaleImage,
     title: 'khetiwale.com',
     category: 'WordPress',
     description:
@@ -22,7 +28,7 @@ const projectsData: Project[] = [
     link: 'https://khetiwale.com/',
   },
   {
-    image: './universityresultzone.png',
+    image: universityImage,
     title: 'universityresultzone.com',
     category: 'WordPress',
     description:
@@ -30,11 +36,11 @@ const projectsData: Project[] = [
     link: 'https://universityresultzone.com/',
   },
   {
-    image: './topgearguide.png',
+    image: topgearImage,
     title: 'topgearguide.com',
     category: 'WordPress',
     description:
-      'topgearguide.com – An automobile-focused website built using WordPress, dedicated to delivering the latest updates on cars, bikes, and mobile launches. The site provides detailed reviews, comparisons, and automotive news to help readers make informed decisions. I handled the design, development, SEO, and performance optimization of the site.',
+      'An automobile-focused website built using WordPress, dedicated to delivering the latest updates on cars, bikes, and mobile launches. The site provides detailed reviews, comparisons, and automotive news to help readers make informed decisions. I handled the design, development, SEO, and performance optimization of the site.',
     link: 'https://topgearguide.com/',
   },
 ];
