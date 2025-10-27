@@ -12,8 +12,8 @@ const contactDetails = {
     link: 'tel:+919528421225',
   },
   email: {
-    display: 'info@sainetix.com',
-    link: 'mailto:info@sainetix.com',
+    display: 'rohitsainics8@gmail.com',
+    link: 'mailto:rohitsainics8@gmail.com',
   },
   whatsapp: {
     display: 'Chat on WhatsApp',
