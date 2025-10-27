@@ -1,61 +1,81 @@
 // Fix: Redesigned the Contact page with a cleaner layout and updated form styles.
-import React, { useState } from 'react';
+import React from 'react';
 import AnimatedSection from './AnimatedSection';
+import PhoneIcon from './icons/PhoneIcon';
+import EmailIcon from './icons/EmailIcon';
+import WhatsAppIcon from './icons/WhatsAppIcon';
+
+// Placeholder contact info
+const contactDetails = {
+  phone: {
+    display: '+91 95284 21225',
+    link: 'tel:+919528421225',
+  },
+  email: {
+    display: 'info@sainetix.com',
+    link: 'mailto:info@sainetix.com',
+  },
+  whatsapp: {
+    display: 'Chat on WhatsApp',
+    link: 'https://wa.me/919528421225',
+  },
+};
 
 const ContactPage: React.FC = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form data submitted:', formData);
-    setSubmitted(true);
-  };
-
   return (
     <div className="py-24 pt-36 min-h-screen flex items-center">
       <div className="container max-w-7xl mx-auto px-6">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <AnimatedSection>
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">Get In Touch</h2>
               <p className="text-lg text-zinc-400">
-                Have a project in mind, a question, or just want to say hello? We’d love to hear from you.
+                Have a project in mind, a question, or just want to say hello? Reach out to us through any of the channels below.
               </p>
             </div>
           </AnimatedSection>
           
           <AnimatedSection delay="delay-200">
-            {submitted ? (
-              <div className="text-center bg-white/5 border border-indigo-500/30 p-12 rounded-xl">
-                <h3 className="text-3xl font-bold text-white mb-3">Thank You!</h3>
-                <p className="text-zinc-300">Your message has been sent. We'll be in touch shortly.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="bg-white/5 border border-white/10 p-8 rounded-xl shadow-lg space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-zinc-300 mb-2">Full Name</label>
-                  <input type="text" name="name" id="name" required className="w-full bg-white/5 border-2 border-white/10 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all" onChange={handleChange} />
+            <div className="space-y-6">
+              {/* Phone */}
+              <a href={contactDetails.phone.link} className="group block bg-white/5 border border-white/10 p-6 rounded-xl shadow-lg transition-all hover:border-indigo-500/50 hover:bg-white/10">
+                <div className="flex items-center space-x-5">
+                  <div className="flex-shrink-0 bg-zinc-800 p-4 rounded-full border border-zinc-700 group-hover:bg-indigo-600/20 group-hover:border-indigo-500 transition-colors">
+                    <PhoneIcon className="w-6 h-6 text-indigo-400"/>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">Call Us</h3>
+                    <p className="text-lg text-zinc-300 group-hover:text-indigo-300 transition-colors">{contactDetails.phone.display}</p>
+                  </div>
                 </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">Email Address</label>
-                  <input type="email" name="email" id="email" required className="w-full bg-white/5 border-2 border-white/10 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all" onChange={handleChange} />
+              </a>
+
+              {/* Email */}
+              <a href={contactDetails.email.link} className="group block bg-white/5 border border-white/10 p-6 rounded-xl shadow-lg transition-all hover:border-indigo-500/50 hover:bg-white/10">
+                <div className="flex items-center space-x-5">
+                  <div className="flex-shrink-0 bg-zinc-800 p-4 rounded-full border border-zinc-700 group-hover:bg-indigo-600/20 group-hover:border-indigo-500 transition-colors">
+                    <EmailIcon className="w-6 h-6 text-indigo-400"/>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">Email Us</h3>
+                    <p className="text-lg text-zinc-300 group-hover:text-indigo-300 transition-colors">{contactDetails.email.display}</p>
+                  </div>
                 </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-zinc-300 mb-2">Message</label>
-                  <textarea name="message" id="message" rows={5} required className="w-full bg-white/5 border-2 border-white/10 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all" onChange={handleChange}></textarea>
+              </a>
+
+              {/* WhatsApp */}
+              <a href={contactDetails.whatsapp.link} target="_blank" rel="noopener noreferrer" className="group block bg-white/5 border border-white/10 p-6 rounded-xl shadow-lg transition-all hover:border-indigo-500/50 hover:bg-white/10">
+                <div className="flex items-center space-x-5">
+                  <div className="flex-shrink-0 bg-zinc-800 p-4 rounded-full border border-zinc-700 group-hover:bg-indigo-600/20 group-hover:border-indigo-500 transition-colors">
+                    <WhatsAppIcon className="w-6 h-6 text-indigo-400"/>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">Message Us</h3>
+                    <p className="text-lg text-zinc-300 group-hover:text-indigo-300 transition-colors">{contactDetails.whatsapp.display}</p>
+                  </div>
                 </div>
-                <div className="text-center pt-2">
-                   <button type="submit" className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-10 rounded-lg shadow-lg shadow-indigo-600/30 transition-all transform hover:scale-105 text-lg">
-                    Send Message
-                  </button>
-                </div>
-              </form>
-            )}
+              </a>
+            </div>
           </AnimatedSection>
         </div>
       </div>
