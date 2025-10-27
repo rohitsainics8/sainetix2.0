@@ -18,6 +18,7 @@ import BlogPostPage from './components/BlogPostPage';
 import CreatePostPage from './components/CreatePostPage';
 import LoginPage from './components/LoginPage';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
+import WhatsAppToggle from './components/WhatsAppToggle';
 
 const routes: { [key: string]: React.ComponentType<any> } = {
   '/': HomePage,
@@ -101,6 +102,7 @@ const AppContent: React.FC = () => {
           <Page {...pageProps} />
       </main>
       <Footer setActiveRoute={setRoute} />
+      <WhatsAppToggle />
     </div>
   );
 }
